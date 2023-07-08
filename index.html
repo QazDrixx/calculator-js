@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="/src/css/input_range.css">
+    <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+    <main class="wrap">
+        <div class="calc-header">
+            <div style="padding: 6px 0 0 6px;">calc</div>
+            <div class="theme-choise">
+                <div style="padding-top: 10px;">THEME</div>
+                <div class="swither-wrap">
+                    <div class="swither-labels">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                    <input type="range" min="1" step="1" max="3" value="1" class="theme-swither">
+                </div>
+            </div>
+        </div>
+        <div class="calc-display">
+        </div>
+        <div class="calc-keyboard">
+            <div class="keyboard-num">7</div>
+            <div class="keyboard-num">8</div>
+            <div class="keyboard-num">9</div>
+            <div class="keyboard-del">DEL</div>
+            <div class="keyboard-num">4</div>
+            <div class="keyboard-num">5</div>
+            <div class="keyboard-num">6</div>
+            <div class="keyboard-op">+</div>
+            <div class="keyboard-num">1</div>
+            <div class="keyboard-num">2</div>
+            <div class="keyboard-num">3</div>
+            <div class="keyboard-op">-</div>
+            <div class="keyboard-dot">.</div>
+            <div class="keyboard-num">0</div>
+            <div class="keyboard-op">/</div>
+            <div class="keyboard-op">x</div>
+            <div class="keyboard-reset">RESET</div>
+            <div class="keyboard-eq">=</div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.2/math.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
