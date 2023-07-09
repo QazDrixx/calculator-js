@@ -1,1 +1,0 @@
-math.evaluate('sqrt(3^2 + 4^2)') 

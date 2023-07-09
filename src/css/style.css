@@ -56,6 +56,10 @@ body, html {
   font-size: 24px;
 }
 
+.calc-calc {
+  padding: 6px 0 0 6px;
+}
+
 .theme-choise {
   display: flex;
   align-items: center;
@@ -149,6 +153,28 @@ body, html {
 .keyboard-eq {
   grid-column-start: 3;
   grid-column-end: 5;
+}
+
+@media (max-width: 576px) {
+  .wrap {
+    margin: 20px 32px;
+    height: 93vh;
+    grid-template-rows: 44px 86px auto;
+  }
+  .calc-calc {
+    padding: 0;
+    font-size: 28px;
+  }
+  .calc-keyboard {
+    gap: 12px;
+    row-gap: 14px;
+  }
+  .calc-keyboard .keyboard-reset, .calc-keyboard .keyboard-eq {
+    padding: 24px 0;
+  }
+  .theme-choise {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

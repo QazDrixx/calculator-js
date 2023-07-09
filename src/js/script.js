@@ -55,11 +55,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     function set_display_text(str) {
-        calc_display.innerText = str
+        
+        calc_display.innerText = String(str).replace(/\./g, ',')
         if(eq_flag) eq_flag = false
     }
 })
-
 
 // let a = '11+17'
 

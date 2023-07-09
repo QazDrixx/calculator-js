@@ -64,6 +64,10 @@ body, html {
     font-size: 24px;
 }
 
+.calc-calc {
+    padding: 6px 0 0 6px;
+}
+
 .theme-choise {
     display: flex;
     align-items: center;
@@ -123,6 +127,7 @@ body, html {
         user-select: none;
     }
 
+    
     @mixin sp($background, $shadow_color) {
         color: hsl(0, 0%, 100%);
         background: $background;
@@ -130,7 +135,7 @@ body, html {
         padding: 16px 4px 12px 4px;
         box-shadow: 0 3px $shadow_color
     }
-
+    
     .keyboard-del, .keyboard-reset{
         @include sp(hsl(225, 21%, 49%), hsl(224, 28%, 35%));
     }
@@ -138,16 +143,16 @@ body, html {
     .keyboard-eq {
         @include sp(hsl(6, 63%, 50%), hsl(6, 70%, 34%));
     }
-
+    
     div:active {
         transform: translateY(3px);
         box-shadow: 0 0;
     }
-
+    
     div:hover {
         background: #fff;
     }
-
+    
     .keyboard-del:hover, .keyboard-reset:hover{
         background:hsl(224, 51%, 76%)
     }
@@ -155,7 +160,6 @@ body, html {
     .keyboard-eq:hover {
         background: hsl(6, 93%, 67%)
     }
-    
 }
 
 
@@ -168,3 +172,31 @@ body, html {
     grid-column-start: 3;
     grid-column-end: 5;
 }
+
+@media (max-width: 576px) {
+    .wrap {
+      margin: 20px 32px;
+      height: 93vh;
+      grid-template-rows: 44px 86px auto;
+    }
+  
+    .calc-calc {
+        padding: 0;
+        font-size: 28px;
+    }
+    .calc-keyboard {
+      gap: 12px;
+      row-gap: 14px;   
+
+        .keyboard-reset, .keyboard-eq {
+            padding: 24px 0;
+        }
+    }
+  
+    .theme-choise {
+      font-size: 14px;
+    }
+
+
+
+  }
