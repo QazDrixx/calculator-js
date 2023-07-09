@@ -1,10 +1,12 @@
 /*generated with Input range slider CSS style generator (version 20211225)
 https://toughengineer.github.io/demo/slider-styler*/
+
+
+
 input[type=range].theme-swither {
     height: 2.2em;
     width: 58px;
     margin: 0;
-    background: hsl(222, 26%, 31%);
     -webkit-appearance: none;
 }
   
@@ -18,7 +20,6 @@ input[type=range].theme-swither {
     width: 1em;
     height: 1em;
     border-radius: 1em;
-    background: #D03F2F;
     border: none;
     box-shadow: 0 0 2px black;
     margin-top: calc(1.6em * 0.5 - 1em * 0.5);
@@ -29,20 +30,15 @@ input[type=range].theme-swither {
     border: none;
     padding: 0 4px;
     border-radius: 1em;
-    background: #232C43;
     box-shadow: none;
   }
   
-  input[type=range].theme-swither::-webkit-slider-thumb:hover {
-    background: #93261A;
-  }
   
   /*mozilla*/
   input[type=range].theme-swither::-moz-range-thumb {
     width: 1em;
     height: 1em;
     border-radius: 1em;
-    background: #D03F2F;
     border: none;
     box-shadow: 0 0 2px black;
   }
@@ -51,13 +47,9 @@ input[type=range].theme-swither {
     height: 1.6em;
     border: none;
     border-radius: 1em;
-    background: #232C43;
     box-shadow: none;
   }
   
-  input[type=range].theme-swither::-moz-range-thumb:hover {
-    background: #93261A;
-  }
   
   /*ms*/
   input[type=range].theme-swither::-ms-fill-upper {
@@ -74,7 +66,6 @@ input[type=range].theme-swither {
     width: 1em;
     height: 1em;
     border-radius: 1em;
-    background: #D03F2F;
     border: none;
     box-shadow: 0 0 2px black;
     margin-top: 0;
@@ -84,13 +75,9 @@ input[type=range].theme-swither {
   input[type=range].theme-swither::-ms-track {
     height: 1.6em;
     border-radius: 1em;
-    background: #232C43;
     border: none;
     box-shadow: none;
     box-sizing: border-box;
   }
   
-  input[type=range].theme-swither::-ms-thumb:hover {
-    background: #93261A;
-  }
   

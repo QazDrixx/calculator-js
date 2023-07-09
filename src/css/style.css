@@ -5,33 +5,242 @@
 
 body, html {
   font-family: "League Spartan", sans-serif;
-  background: hsl(222, 26%, 31%);
   font-size: 32px;
   font-weight: 700;
 }
 
-/* width */
-::-webkit-scrollbar {
-  height: 6px;
-  border-radius: 4px;
-  position: absolute;
+.theme1 body, .theme1 html {
+  background: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
+.theme1 ::-webkit-scrollbar-thumb {
   background: hsl(225, 21%, 49%);
-  border-radius: 4px;
+}
+.theme1 ::-webkit-scrollbar-thumb:hover {
+  background: hsl(224, 51%, 76%);
+}
+.theme1 input[type=range].theme-swither {
+  background: hsl(222, 26%, 31%);
+}
+.theme1 input[type=range].theme-swither::-webkit-slider-thumb {
+  background: hsl(6, 63%, 50%);
+}
+.theme1 input[type=range].theme-swither::-webkit-slider-runnable-track {
+  background: hsl(223, 31%, 20%);
+}
+.theme1 input[type=range].theme-swither::-webkit-slider-thumb:hover {
+  background: hsl(6, 70%, 34%);
+}
+.theme1 input[type=range].theme-swither::-moz-range-thumb {
+  background: hsl(6, 63%, 50%);
+}
+.theme1 input[type=range].theme-swither::-moz-range-track {
+  background: hsl(223, 31%, 20%);
+}
+.theme1 input[type=range].theme-swither::-moz-range-thumb:hover {
+  background: hsl(6, 70%, 34%);
+}
+.theme1 input[type=range].theme-swither::-ms-thumb {
+  background: hsl(6, 63%, 50%);
+}
+.theme1 input[type=range].theme-swither::-ms-track {
+  background: hsl(223, 31%, 20%);
+}
+.theme1 input[type=range].theme-swither::-ms-thumb:hover {
+  background: hsl(6, 70%, 34%);
+}
+.theme1 .calc-display {
+  background: hsl(224, 36%, 15%);
+}
+.theme1 .calc-keyboard {
+  background: hsl(223, 31%, 20%);
+}
+.theme1 .calc-keyboard div {
+  color: hsl(221, 14%, 31%);
+  background: hsl(30, 25%, 89%);
+  box-shadow: 0.5px 3px hsl(28, 16%, 65%);
+}
+.theme1 .calc-keyboard div:active {
+  box-shadow: 0 0;
+}
+.theme1 .calc-keyboard .keyboard-del, .theme1 .calc-keyboard .keyboard-reset {
+  color: hsl(0, 0%, 100%);
+  background: hsl(225, 21%, 49%);
+  font-size: 22px;
+  padding: 16px 4px 12px 4px;
+  box-shadow: 0 3px hsl(224, 28%, 35%);
+}
+.theme1 .calc-keyboard .keyboard-eq {
+  color: hsl(0, 0%, 100%);
+  background: hsl(6, 63%, 50%);
+  font-size: 22px;
+  padding: 16px 4px 12px 4px;
+  box-shadow: 0 3px hsl(6, 70%, 34%);
+}
+.theme1 .calc-keyboard div:hover {
+  background: hsl(0, 0%, 100%);
+}
+.theme1 .calc-keyboard .keyboard-del:hover, .theme1 .calc-keyboard .keyboard-reset:hover {
+  background: hsl(224, 51%, 76%);
+}
+.theme1 .calc-keyboard .keyboard-eq:hover {
+  background: hsl(6, 93%, 67%);
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.theme2 body, .theme2 html {
+  background: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+.theme2 ::-webkit-scrollbar-thumb {
+  background: hsl(185, 42%, 37%);
+}
+.theme2 ::-webkit-scrollbar-thumb:hover {
+  background: hsl(185, 41%, 56%);
+}
+.theme2 input[type=range].theme-swither {
+  background: hsl(0, 0%, 90%);
+}
+.theme2 input[type=range].theme-swither::-webkit-slider-thumb {
+  background: hsl(25, 98%, 40%);
+}
+.theme2 input[type=range].theme-swither::-webkit-slider-runnable-track {
+  background: hsl(0, 5%, 81%);
+}
+.theme2 input[type=range].theme-swither::-webkit-slider-thumb:hover {
+  background: hsl(25, 99%, 27%);
+}
+.theme2 input[type=range].theme-swither::-moz-range-thumb {
+  background: hsl(25, 98%, 40%);
+}
+.theme2 input[type=range].theme-swither::-moz-range-track {
+  background: hsl(0, 5%, 81%);
+}
+.theme2 input[type=range].theme-swither::-moz-range-thumb:hover {
+  background: hsl(25, 99%, 27%);
+}
+.theme2 input[type=range].theme-swither::-ms-thumb {
+  background: hsl(25, 98%, 40%);
+}
+.theme2 input[type=range].theme-swither::-ms-track {
+  background: hsl(0, 5%, 81%);
+}
+.theme2 input[type=range].theme-swither::-ms-thumb:hover {
+  background: hsl(25, 99%, 27%);
+}
+.theme2 .calc-display {
+  background: hsl(0, 0%, 93%);
+}
+.theme2 .calc-keyboard {
+  background: hsl(0, 5%, 81%);
+}
+.theme2 .calc-keyboard div {
+  color: hsl(60, 10%, 19%);
+  background: hsl(45, 7%, 89%);
+  box-shadow: 0.5px 3px hsl(35, 11%, 61%);
+}
+.theme2 .calc-keyboard div:active {
+  box-shadow: 0 0;
+}
+.theme2 .calc-keyboard .keyboard-del, .theme2 .calc-keyboard .keyboard-reset {
+  color: hsl(0, 0%, 100%);
+  background: hsl(185, 42%, 37%);
+  font-size: 22px;
+  padding: 16px 4px 12px 4px;
+  box-shadow: 0 3px hsl(185, 58%, 25%);
+}
+.theme2 .calc-keyboard .keyboard-eq {
+  color: hsl(0, 0%, 100%);
+  background: hsl(25, 98%, 40%);
+  font-size: 22px;
+  padding: 16px 4px 12px 4px;
+  box-shadow: 0 3px hsl(25, 99%, 27%);
+}
+.theme2 .calc-keyboard div:hover {
+  background: hsl(0, 0%, 100%);
+}
+.theme2 .calc-keyboard .keyboard-del:hover, .theme2 .calc-keyboard .keyboard-reset:hover {
+  background: hsl(185, 41%, 56%);
+}
+.theme2 .calc-keyboard .keyboard-eq:hover {
+  background: hsl(25, 100%, 61%);
+}
+
+.theme3 body, .theme3 html {
+  background: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+.theme3 ::-webkit-scrollbar-thumb {
+  background: hsl(281, 89%, 26%);
+}
+.theme3 ::-webkit-scrollbar-thumb:hover {
+  background: hsl(280, 56%, 44%);
+}
+.theme3 input[type=range].theme-swither {
+  background: hsl(268, 75%, 9%);
+}
+.theme3 input[type=range].theme-swither::-webkit-slider-thumb {
+  background: hsl(176, 100%, 44%);
+}
+.theme3 input[type=range].theme-swither::-webkit-slider-runnable-track {
+  background: hsl(268, 71%, 12%);
+}
+.theme3 input[type=range].theme-swither::-webkit-slider-thumb:hover {
+  background: hsl(177, 92%, 70%);
+}
+.theme3 input[type=range].theme-swither::-moz-range-thumb {
+  background: hsl(176, 100%, 44%);
+}
+.theme3 input[type=range].theme-swither::-moz-range-track {
+  background: hsl(268, 71%, 12%);
+}
+.theme3 input[type=range].theme-swither::-moz-range-thumb:hover {
+  background: hsl(177, 92%, 70%);
+}
+.theme3 input[type=range].theme-swither::-ms-thumb {
+  background: hsl(176, 100%, 44%);
+}
+.theme3 input[type=range].theme-swither::-ms-track {
+  background: hsl(268, 71%, 12%);
+}
+.theme3 input[type=range].theme-swither::-ms-thumb:hover {
+  background: hsl(177, 92%, 70%);
+}
+.theme3 .calc-display {
+  background: hsl(268, 71%, 12%);
+}
+.theme3 .calc-keyboard {
+  background: hsl(268, 71%, 12%);
+}
+.theme3 .calc-keyboard div {
+  color: hsl(52, 100%, 62%);
+  background: hsl(268, 47%, 21%);
+  box-shadow: 0.5px 3px hsl(290, 70%, 36%);
+}
+.theme3 .calc-keyboard div:active {
+  box-shadow: 0 0;
+}
+.theme3 .calc-keyboard .keyboard-del, .theme3 .calc-keyboard .keyboard-reset {
+  color: hsl(0, 0%, 100%);
+  background: hsl(281, 89%, 26%);
+  font-size: 22px;
+  padding: 16px 4px 12px 4px;
+  box-shadow: 0 3px hsl(285, 91%, 52%);
+}
+.theme3 .calc-keyboard .keyboard-eq {
+  color: hsl(198, 20%, 13%);
+  background: hsl(176, 100%, 44%);
+  font-size: 22px;
+  padding: 16px 4px 12px 4px;
+  box-shadow: 0 3px hsl(177, 92%, 70%);
+}
+.theme3 .calc-keyboard div:hover {
+  background: hsl(268, 54%, 44%);
+}
+.theme3 .calc-keyboard .keyboard-del:hover, .theme3 .calc-keyboard .keyboard-reset:hover {
+  background: hsl(280, 56%, 44%);
+}
+.theme3 .calc-keyboard .keyboard-eq:hover {
+  background: hsl(177, 100%, 79%);
 }
 
 .wrap {
@@ -52,7 +261,6 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: hsl(0, 0%, 100%);
   font-size: 24px;
 }
 
@@ -71,7 +279,7 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 24px;
+  margin-left: 20px;
 }
 
 .swither-labels {
@@ -84,10 +292,8 @@ body, html {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  padding: 0 26px;
-  background: hsl(224, 36%, 15%);
   border-radius: 8px;
-  color: #fff;
+  padding: 0 26px;
   font-size: 44px;
   overflow-x: auto;
 }
@@ -97,10 +303,9 @@ body, html {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   padding: 26px 26px 30px 24px;
+  border-radius: 8px;
   gap: 20px;
   row-gap: 22px;
-  background: hsl(223, 31%, 20%);
-  border-radius: 8px;
   justify-content: center;
 }
 .calc-keyboard div {
@@ -108,41 +313,15 @@ body, html {
   align-items: center;
   align-content: center;
   justify-content: center;
-  color: hsl(221, 14%, 31%);
-  background: hsl(30, 25%, 89%);
   padding: 5px 4px 0px 4px;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0.5px 3px hsl(28, 16%, 65%);
   transition: all 0.2s ease;
   user-select: none;
-}
-.calc-keyboard .keyboard-del, .calc-keyboard .keyboard-reset {
-  color: hsl(0, 0%, 100%);
-  background: hsl(225, 21%, 49%);
-  font-size: 22px;
-  padding: 16px 4px 12px 4px;
-  box-shadow: 0 3px hsl(224, 28%, 35%);
-}
-.calc-keyboard .keyboard-eq {
-  color: hsl(0, 0%, 100%);
-  background: hsl(6, 63%, 50%);
-  font-size: 22px;
-  padding: 16px 4px 12px 4px;
-  box-shadow: 0 3px hsl(6, 70%, 34%);
 }
 .calc-keyboard div:active {
   transform: translateY(3px);
   box-shadow: 0 0;
-}
-.calc-keyboard div:hover {
-  background: #fff;
-}
-.calc-keyboard .keyboard-del:hover, .calc-keyboard .keyboard-reset:hover {
-  background: hsl(224, 51%, 76%);
-}
-.calc-keyboard .keyboard-eq:hover {
-  background: hsl(6, 93%, 67%);
 }
 
 .keyboard-reset {
@@ -175,6 +354,23 @@ body, html {
   .theme-choise {
     font-size: 14px;
   }
+}
+::-webkit-scrollbar {
+  height: 6px;
+  border-radius: 4px;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

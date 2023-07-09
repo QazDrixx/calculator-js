@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&family=Open+Sans&display=swap');
 
-$main_background1:hsl(222, 26%, 31%);
-$display_background1:hsl(224, 36%, 15%);
-$keyboard_background1: hsl(223, 31%, 20%);
+// $keyboard_b: hsl(223, 31%, 20%);
 $border_radius: 8px;
 
 * {
@@ -11,35 +9,121 @@ $border_radius: 8px;
 
 body, html {
     font-family: 'League Spartan', sans-serif;
-    background: $main_background1;
     font-size: 32px;
     font-weight: 700;
 }
 
+@mixin sp($background, $shadow_color, $text-color) {
+    color: $text-color;
+    background: $background;
+    font-size: 22px;
+    padding: 16px 4px 12px 4px;
+    box-shadow: 0 3px $shadow_color
+}
 
-/* width */
-::-webkit-scrollbar {
-    height: 6px;
-    border-radius: 4px;
-    position: absolute;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 4px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: hsl(225, 21%, 49%);
-    border-radius: 4px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+@mixin theme ($main_b, $display_b, $keyboard_b, $num_b, $del_b, $eq_b, $num_hov, $del_hov, $eq_hov, $num_shodow, $del_shadow, $eq_shadow, $text_color, $text_button_color, $text_del_color, $text_eq_color) {
+    body, html {
+        background: $main_b;
+        color: $text_color;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $del_b;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background:  $del_hov; 
+    }
+
+    input[type=range].theme-swither {
+        background: $main_b;
+    }
+
+    input[type=range].theme-swither::-webkit-slider-thumb {
+        background: $eq_b;
+    }
+    
+    input[type=range].theme-swither::-webkit-slider-runnable-track {
+        background: $keyboard_b;
+    }
+
+    input[type=range].theme-swither::-webkit-slider-thumb:hover {
+        background: $eq_shadow;
+    }
+
+    input[type=range].theme-swither::-moz-range-thumb {
+        background: $eq_b;
+    }
+
+    input[type=range].theme-swither::-moz-range-track {
+        background: $keyboard_b;
+    }
+
+    input[type=range].theme-swither::-moz-range-thumb:hover {
+        background: $eq_shadow;
+    }
+
+    input[type=range].theme-swither::-ms-thumb {
+        background: $eq_b;
+    }
+
+    input[type=range].theme-swither::-ms-track {
+        background: $keyboard_b;
+    }
+
+    input[type=range].theme-swither::-ms-thumb:hover {
+        background: $eq_shadow;
+    }
+
+    .calc-display {
+        background: $display_b;
+    }
+
+
+    .calc-keyboard {
+        background: $keyboard_b;
+        div {
+            color: $text_button_color;
+            background: $num_b;
+            box-shadow: 0.5px 3px $num_shodow;
+        }
+
+        div:active {
+            box-shadow: 0 0;
+        }
+
+        .keyboard-del, .keyboard-reset{
+            @include sp($del_b, $del_shadow, $text_del_color);
+        }
+        
+        .keyboard-eq {
+            @include sp($eq_b, $eq_shadow, $text_eq_color);
+        }
+        div:hover {
+            background: $num_hov
+        }
+        
+        .keyboard-del:hover, .keyboard-reset:hover{
+            background: $del_hov
+        }
+        
+        .keyboard-eq:hover {
+            background: $eq_hov
+        }
+    }
+}
+
+.theme1 {
+    @include theme(hsl(222, 26%, 31%), hsl(224, 36%, 15%), hsl(223, 31%, 20%), hsl(30, 25%, 89%), hsl(225, 21%, 49%), hsl(6, 63%, 50%), hsl(0, 0%, 100%), hsl(224, 51%, 76%), hsl(6, 93%, 67%), hsl(28, 16%, 65%), hsl(224, 28%, 35%), hsl(6, 70%, 34%), hsl(0, 0%, 100%), hsl(221, 14%, 31%), hsl(0, 0%, 100%), hsl(0, 0%, 100%))
+}
+
+.theme2 {
+    @include theme(hsl(0, 0%, 90%), hsl(0, 0%, 93%), hsl(0, 5%, 81%), hsl(45, 7%, 89%), hsl(185, 42%, 37%), hsl(25, 98%, 40%),  hsl(0, 0%, 100%), hsl(185, 41%, 56%), hsl(25, 100%, 61%), hsl(35, 11%, 61%), hsl(185, 58%, 25%), hsl(25, 99%, 27%), hsl(60, 10%, 19%), hsl(60, 10%, 19%), hsl(0, 0%, 100%), hsl(0, 0%, 100%))
+}
+
+.theme3 {
+    @include theme(hsl(268, 75%, 9%), hsl(268, 71%, 12%), hsl(268, 71%, 12%), hsl(268, 47%, 21%), hsl(281, 89%, 26%), hsl(176, 100%, 44%), hsl(268, 54%, 44%), hsl(280, 56%, 44%), hsl(177, 100%, 79%), hsl(290, 70%, 36%), hsl(285, 91%, 52%), hsl(177, 92%, 70%), hsl(52, 100%, 62%), hsl(52, 100%, 62%), hsl(0, 0%, 100%), hsl(198, 20%, 13%))
+}
 
 .wrap {
     position: absolute;
@@ -60,7 +144,6 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: hsl(0, 0%, 100%);
     font-size: 24px;
 }
 
@@ -79,7 +162,8 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 24px;
+    
+    margin-left: 20px;
 }
 
 .swither-labels {
@@ -93,10 +177,8 @@ body, html {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    padding: 0 26px;
-    background: $display_background1;
     border-radius: $border_radius;
-    color: #fff;
+    padding: 0 26px;
     font-size: 44px;
     overflow-x: auto;
 }
@@ -106,10 +188,9 @@ body, html {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     padding: 26px 26px 30px 24px;
+    border-radius: $border_radius;
     gap: 20px;
     row-gap: 22px;
-    background: $keyboard_background1;
-    border-radius: $border_radius;
     justify-content: center;
 
     div {
@@ -117,48 +198,16 @@ body, html {
         align-items: center;
         align-content: center;
         justify-content: center;
-        color: hsl(221, 14%, 31%);
-        background: hsl(30, 25%, 89%);
         padding: 5px 4px 0px 4px;
         border-radius: 8px;
         cursor: pointer;
-        box-shadow: 0.5px 3px hsl(28, 16%, 65%);
         transition: all .2s ease;
         user-select: none;
     }
 
-    
-    @mixin sp($background, $shadow_color) {
-        color: hsl(0, 0%, 100%);
-        background: $background;
-        font-size: 22px;
-        padding: 16px 4px 12px 4px;
-        box-shadow: 0 3px $shadow_color
-    }
-    
-    .keyboard-del, .keyboard-reset{
-        @include sp(hsl(225, 21%, 49%), hsl(224, 28%, 35%));
-    }
-    
-    .keyboard-eq {
-        @include sp(hsl(6, 63%, 50%), hsl(6, 70%, 34%));
-    }
-    
     div:active {
         transform: translateY(3px);
         box-shadow: 0 0;
-    }
-    
-    div:hover {
-        background: #fff;
-    }
-    
-    .keyboard-del:hover, .keyboard-reset:hover{
-        background:hsl(224, 51%, 76%)
-    }
-    
-    .keyboard-eq:hover {
-        background: hsl(6, 93%, 67%)
     }
 }
 
@@ -196,7 +245,22 @@ body, html {
     .theme-choise {
       font-size: 14px;
     }
+}
 
+::-webkit-scrollbar {
+    height: 6px;
+    border-radius: 4px;
+    position: absolute;
+}
 
-
-  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+  
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+   
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+}
