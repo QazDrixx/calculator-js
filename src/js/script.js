@@ -46,9 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
             let s = calc_display.innerText.slice(-1);
             dot_flag = true;
             eq_flag = false;
-            if (/\d/.test(s) && calc_display.innerText != '' || (e.target.innerText == '-' && s != '-')) {
+            if (/\d/.test(s) && calc_display.innerText != '') {
                 calc_display.innerText += e.target.innerText;
-
             } else if (
                 /\+|-|x|\//.test(s) &&
                 s != e.target.innerText &&
@@ -57,8 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 set_display_text(calc_display.innerText.slice(0, -1) + e.target.innerText);
             } else if (e.target.innerText == '-' && !calc_display.innerText)
                 calc_display.innerText += '-';
-
-            
         })
     );
 
