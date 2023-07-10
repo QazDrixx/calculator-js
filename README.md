@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/QazDrixx/calculator-js)
-- Live Site URL: [Add live site URL here](https://qazdrixx.github.io/calculator-js/)
+- Solution URL: (https://github.com/QazDrixx/calculator-js)
+- Live Site URL: (https://qazdrixx.github.io/calculator-js/)
 
 
 ### Built with
