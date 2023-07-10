@@ -43,6 +43,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - SCSS
+- [Input range slider CSS style generator](https://toughengineer.github.io/demo/slider-styler)
 - [math.js](https://mathjs.org/) - JS library
 
 
